@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import Layout from './../components/layout';
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+    return (
+        <Layout>
+            <Component {...pageProps} />
+            <style jsx global>{`
+                a {
+                    color: green;
+                }
+            `}</style>
+        </Layout>
+    )
 }
-
-export default MyApp
